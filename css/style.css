@@ -4,3 +4,56 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+img {
+    width: 100%;
+}
+
+/* CONTAINER SLIDER */
+.container-slider {
+    padding-top: 15px;
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+
+/* SLIDER */
+.slider {
+    display: flex;
+    align-items: center;
+    
+}
+
+.slider .image {
+    padding: 0 5%;
+}
+
+.slider .image img {
+    height: 600px;
+}
+
+.arrow {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.circles .active {
+    color: blue;
+}
+
+/* CIRCLES */
+.circles {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translatex(-50%);
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 100px;
+    padding: 20px;
+}
+
+.circle {
+    color: white;
+    display: inline-block;
+    margin: 0 10px;
+}

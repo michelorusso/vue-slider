@@ -7,6 +7,7 @@
     
     <title>Slider</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -18,7 +19,38 @@
     
     <div id="root">
         
-        
+        <!-- CONTAINER SLIDER -->
+        <div class="container-slider">
+
+            <!-- Slider -->
+            <div class="slider">
+
+                <div class="arrow" @click="prevImg">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+
+                <div class="image">
+                    <img :src="images[courentImage]" alt="">
+                </div>
+
+                <div class="arrow" @click="nextImg">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+
+            </div>
+            <!-- End Slider -->
+
+            <!-- CIRCLES -->
+            <div class="circles">
+                <div v-for="(image, index) in images" class="circle" :class="{'active': index == courentImage}">
+                    <i class="fas fa-circle"></i>
+                </div>
+            </div>
+            <!-- END CIRCLES -->
+
+        </div>
+        <!-- END CONTAINER SLIDER -->
+
     </div>
 
     <!-- JAVASCRIPT -->
